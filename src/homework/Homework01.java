@@ -45,7 +45,7 @@ public class Homework01 {
             FileOutputStream fos = new FileOutputStream(f1,true);//true 追加写入
             // 把数据写入到输出流
             for(int ii = 0 ; ii < result.size() ; ii++) {
-                System.out.println(result.get(ii));
+//                System.out.println(result.get(ii));
                 fos.write(result.get(ii).getBytes());
                 fos.write("\r\n".getBytes());
             }
