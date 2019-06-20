@@ -9,7 +9,7 @@ public class java基础作业1 {
             Account one = new Account(182.5,"12asddd",12345,"张三",'男');
         }catch (MyException e){
             System.out.println("错误原因:"+e.getMessage());
-            e.printStackTrace();
+//            e.printStackTrace();
         }
 
     }
