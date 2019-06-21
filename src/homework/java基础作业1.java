@@ -51,6 +51,9 @@ class Account{
         }
     }
 
+    public Account() {
+    }
+
     public double getMoney() {
         return money;
     }

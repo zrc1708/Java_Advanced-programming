@@ -4,19 +4,9 @@ package homework;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Java基础作业2 {
 
-    public  static String in(){
-        Scanner sc = new Scanner(System.in);
-        String str  = sc.nextLine();
-        if(str.indexOf("end")!=-1){
-            return "false";
-        }else {
-            return str;
-        }
-    }
-
-    public static Object add(String str){
+class Addmenber{       //将输入的字符串处理并生成对象返回
+    public Account add(String str){
         String[] array = str.split(",");
 
         int number = Integer.parseInt(array[0]);
@@ -30,23 +20,38 @@ public class Java基础作业2 {
         } catch (MyException e) {
             System.out.println(e.getMessage());
         }
-        return 0;
+        Account wrong = new Account();
+        return wrong;
+
     }
+
+    public  String in(){
+        Scanner sc = new Scanner(System.in);
+        String str  = sc.nextLine();
+        if(str.indexOf("end")!=-1){
+            return "false";
+        }else {
+            return str;
+        }
+    }
+}
+
+public class Java基础作业2 {
+
 
     public static void main(String[] args) {
 
-        ArrayList  <Object> objects	 = new ArrayList();
+        ArrayList  <Account> objects	 = new ArrayList();
         System.out.println("请输入账号，姓名，金额，性别，以逗号隔开");
-
+        Addmenber ad = new Addmenber();
         while (true){
-            String str = in();
+            String str = ad.in();
             if(str.equals("false")) {
                 System.out.println("结束");
                 break;
             }else{
-//                System.out.println(add(str));
-                if(add(str).toString().length()>=10){
-                    objects.add(add(str));
+                if(ad.add(str).getName()!=null){
+                    objects.add(ad.add(str));
                     System.out.println("添加完成");
                 }else {
                     System.out.println("添加失败");
@@ -54,7 +59,7 @@ public class Java基础作业2 {
 
             }
         }
-        for (Object obj : objects) {//foreach
+        for (Account obj : objects) {//foreach
             System.out.println(obj);
         }
 
