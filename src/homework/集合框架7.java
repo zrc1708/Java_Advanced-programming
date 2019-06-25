@@ -18,7 +18,9 @@ public class 集合框架7 {
                 list.remove(list.get(i));
             }
         }
+
         for (String s:list){
+
             System.out.println(s);
         }
     }

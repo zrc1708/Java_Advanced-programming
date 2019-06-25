@@ -59,7 +59,7 @@ public class Java基础作业2 {
 
             }
         }
-        for (Account obj : objects) {//foreach
+        for (Account obj : objects) {
             System.out.println(obj);
         }
 
